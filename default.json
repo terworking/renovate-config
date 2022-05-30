@@ -2,6 +2,9 @@
   "extends": [
     "config:base",
     "group:allNonMajor",
+    ":disableDependencyDashboard",
+    ":label(renovate)",
+    ":semanticCommits",
     ":semanticCommitTypeAll(chore)"
   ],
   "rangeStrategy": "bump"
