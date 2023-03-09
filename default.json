@@ -1,11 +1,16 @@
 {
-  "extends": [
-    "config:base",
-    "group:allNonMajor",
-    ":disableDependencyDashboard",
-    ":label(renovate)",
-    ":semanticCommits",
-    ":semanticCommitTypeAll(chore)"
-  ],
-  "rangeStrategy": "bump"
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": [
+		"config:base",
+		":automergeMinor",
+		":label(renovate)",
+		":semanticCommits",
+		":semanticCommitTypeAll(chore)"
+	],
+	"automergeType": "branch",
+	"dependencyDashboard": false,
+	"ignoreTests": true,
+	"rangeStrategy": "pin",
+	"schedule": ["every weekend"],
+	"timezone": "Asia/Makassar"
 }
